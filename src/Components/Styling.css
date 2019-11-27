@@ -6,6 +6,9 @@ p {
     font-size: 1.6rem;
     line-height: 1.5;
 }
+.cen{
+    text-align: center;
+}
 h1 {
     font-family: 'Grand Hotel', cursive;
     text-align: center;
@@ -32,4 +35,25 @@ figure {
     width: calc(100% + 4rem);
     margin: -2rem 0rem 0rem -2rem;
 }
- 
+.button-container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button, .button {
+    border: 2px solid #f2f2f2;
+    background: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-basis: 40%;
+    display: inline-block;
+    line-height: 2;
+    text-decoration: none;
+    padding: 3px;
+    text-align: center;
+    font-size: 15px;
+    color: red;
+    transition: all 0.2s;
+    box-sizing: padding-box;
+    
+   }

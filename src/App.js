@@ -4,7 +4,7 @@ import Photoframe from './Components/PhotoFrame';
 
 const allPhotos = [{
   id: "0",
-  description: "beautiful sea",
+  description: "Beautiful sea",
   imageLink: "https://picsum.photos/800/600?image=14"
   }, {
   id: "1",
