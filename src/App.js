@@ -24,12 +24,19 @@ export default class App extends Component {
         imageLink: "https://picsum.photos/800/600?image=85"
         }]
     }
+    this.removePhoto = this.removePhoto.bind(this);
+  }
+  removePhoto(photoid) {
+    console.log(photoid.description);
+    this.setState((state)=> ({
+        allPhotos : state.allPhotos.filter((photo) =>photo !== photoid )
+    }))
   }
   render() {
     return (
       <div>
          <Title  title={'Photoframe'}/>
-     <Photoframe photoblock={this.state.allPhotos} />
+         <Photoframe photoblock={this.state.allPhotos} onRemovePhoto={this.removePhoto} />
       </div>
     )
   }

@@ -6,7 +6,7 @@ export default class PhotoFrame extends Component {
         return (
        
             <div className="photo-grid">
-                {this.props.photoblock.map((singlePhoto,index) => <Photo key={index} finalphoto={singlePhoto}/>)}
+                {this.props.photoblock.map((singlePhoto,index) => <Photo key={index} onRemovePhoto={this.props.onRemovePhoto} finalphoto={singlePhoto}/>)}
             </div>
         )
     }
