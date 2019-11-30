@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Photo from './Photo';
+import PropTypes from 'prop-types';
 
 export default class PhotoFrame extends Component {
     render() {
@@ -10,4 +11,9 @@ export default class PhotoFrame extends Component {
             </div>
         )
     }
+}
+
+PhotoFrame.protoTypes = {
+    photoblock:PropTypes.array.isRequired,
+    onRemovePhoto:PropTypes.func.isRequired
 }
