@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import Title from './Components/Title';
 import Photoframe from './Components/PhotoFrame';
 import Addphoto from './Components/Addphoto';
+import {Route} from 'react-router-dom';
 
 export default class App extends Component {
   constructor(props){
@@ -45,11 +46,16 @@ export default class App extends Component {
   render() {
     return (
       <div>
-         <Title  title={'Photoframe'}/>
-         <Photoframe photoblock={this.state.allPhotos} onRemovePhoto={this.removePhoto} />
-          <Addphoto />
+        <Route exact path="/" render={() => (
+          <div>
+             <Title  title={'Photoframe'}/>
+             <Photoframe photoblock={this.state.allPhotos} onRemovePhoto={this.removePhoto} />
+        </div>
+        )} />
+        <Route path ="/AddPhoto" component={Addphoto} /> 
+          
       </div>
-    )
+    );
   }
 }
 
