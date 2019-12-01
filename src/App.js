@@ -48,11 +48,11 @@ export default class App extends Component {
       <div>
         <Route exact path="/" render={() => (
           <div>
-             <Title  title={'Photoframe'}/>
+             <Title  title={'Photo Frame'}/>
              <Photoframe photoblock={this.state.allPhotos} onRemovePhoto={this.removePhoto} />
         </div>
         )} />
-        <Route path ="/AddPhoto" component={Addphoto} /> 
+        <Route exact path ="/AddPhoto" component={Addphoto} /> 
           
       </div>
     );
