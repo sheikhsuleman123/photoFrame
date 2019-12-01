@@ -57,3 +57,11 @@ button, .button {
     box-sizing: padding-box;
     
    }
+.addIcon{
+    margin: 20px auto;
+    display: table;
+    padding: 40px;
+    background: url("https://image.flaticon.com/icons/svg/14/14232.svg") center no-repeat;;
+    background-size: contain;
+    border: none;
+}
