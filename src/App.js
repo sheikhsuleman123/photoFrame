@@ -35,6 +35,11 @@ export default class App extends Component {
         allPhotos : state.allPhotos.filter((photo) =>photo !== photoid )
     }))
   }
+  addPhoto(photosubmitted) {
+    this.setState(state => ({
+      allPhotos : state.allPhotos.concat([photosubmitted])
+    }))
+  }
                       // this is the example code of fetch data from another component or database 2 part in last lines fetchdatafromdatabase
   // componentDidMount() {
   //   const data = FetchDatafromDatabase();
@@ -52,7 +57,13 @@ export default class App extends Component {
              <Photoframe photoblock={this.state.allPhotos} onRemovePhoto={this.removePhoto} />
         </div>
         )} />
-        <Route exact path ="/AddPhoto" component={Addphoto} /> 
+        <Route exact path ="/AddPhoto"  render={({history}) => (
+          <Addphoto  onAddPhoto={(addedphoto) => {
+              console.log(addedphoto);
+              this.addPhoto(addedphoto);
+              history.push('/');
+          }} />
+        ) } /> 
           
       </div>
     );
