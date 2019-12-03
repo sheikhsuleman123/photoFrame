@@ -10,7 +10,12 @@ export default class PhotoFrame extends Component {
 
             <Link className="addIcon" to="AddPhoto"></Link>
             <div className="photo-grid">
-                {this.props.photoblock.map((singlePhoto,index) => <Photo key={index} onRemovePhoto={this.props.onRemovePhoto} finalphoto={singlePhoto}/>)}
+                {this.props.photoblock
+                .sort(function(x,y) {
+                    return y.id - x.id
+                })
+                .map((singlePhoto,index) => 
+                <Photo key={index} onRemovePhoto={this.props.onRemovePhoto} finalphoto={singlePhoto}/>)}
                 </div>
             </div>
         )

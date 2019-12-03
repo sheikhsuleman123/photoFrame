@@ -11,7 +11,7 @@ export default class Addphoto extends Component {
         const imageLink = e.target.elements.link.value;
         const description = e.target.elements.des.value;
       const photo = {
-          id:0,
+          id: Number(new Date()),
           description: description,
           imageLink:imageLink
       }
