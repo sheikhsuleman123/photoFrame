@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
+import {createStore} from 'redux';
+import RootReducaer from './redux/Reducer';
+
+const store = createStore(RootReducaer);
+
 
 ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 
